@@ -42,6 +42,21 @@ namespace NotlyNote
             UserPassword = "password";
         }
 
+        public MyUser(string FirstName, string LastName, string Password, string Email)
+        {
+            UserFirstName = FirstName;
+            UserLastName = LastName;
+            UserPassword = Password;
+            UserEmail = Email;
+        }
+        public bool IsEmailValid()
+        {
+            if (!Email.Contains('@'))
+                return true;
+            else return false;
+
+        }
+
 
     }
 }
